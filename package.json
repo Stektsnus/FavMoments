@@ -1,0 +1,31 @@
+{
+  "name": "fav-moments",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node app",
+    "dev": "nodemon app"
+  },
+  "description": "FavMoments",
+  "author": {
+    "name": ""
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "debug": "^2.2.0",
+    "express": "^4.14.0",
+    "express-handlebars": "^5.2.0",
+    "i": "^0.3.6",
+    "morgan": "^1.7.0",
+    "multer": "^1.4.2",
+    "pug": "^2.0.0-beta6",
+    "serve-favicon": "^2.5.0"
+  },
+  "engines": {
+    "node": "~6.10.x"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}

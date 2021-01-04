@@ -1,0 +1,36 @@
+﻿<div class="header" id="header">
+    <h1>FavMoments</h1>
+</div>
+<div id="content">
+    {{#each albums}}
+        <div class="albumHolder" id={{{json this.name}}} onclick="goToAlbumPage(this)">
+            <h2>{{{this.name}}}</h2>
+            <div class="albumThumbnail"></div>
+            <script>
+                loadAlbums({{{ json this.name }}}, {{{ json this.images }}});
+            </script>
+        </div>
+        
+    {{/each}}
+<div class="albumHolder" id="newAlbum" onclick="displayPopUpForm(this)">
+    <h2>New Album</h2>
+    <img class="addIcon" src="/icons/add_circle.png" width="50px" height="50px" />
+</div>
+    <div class="formPopUp hidden">
+        <form action="/" method="POST" class="formContainer">
+            <h2>Create new album</h2>
+            <div class="labelContainer">
+                <label for="name">Name</label><br />
+                <input type="text" name="name" />
+            </div>
+            <div class="labelContainer">
+                <label for="description">Description</label><br />
+                <input type="text" name="description" />
+            </div>
+            <input type="submit" value="Create Album" /><br /><br />
+
+            <button type="button" class="albumFormButton" onclick="hidePopUpForm(this)">Close</button>
+        </form>
+    </div>
+    
+</div>

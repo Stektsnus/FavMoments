@@ -1,0 +1,54 @@
+<div class="header" id="header">
+    <h1 id="homeTab"><a href="/">FavMoments</a></h1>
+    <h1>{{this.albumName}}</h1>
+</div>
+<div id="content">
+    {{#each images}}
+    <div class="imageHolder" id={{{json this.name}}} style='background-image:url("{{{this.path}}}")' onclick="showLightBox({{json this.path}}, {{json this.description}}, event)">
+        <h2>{{{this.name}}}</h2>
+        <img class="deleteImage" src="/icons/delete.png" width="25px" height="25px" onclick='deleteImage({{{json this.path}}}, event)' />
+        <div class="imageThumbnail">
+
+        </div>
+        <script>
+                loadImages({{{ json this.name }}}, {{{json this.description}}}, {{{ json this.path }}});
+        </script>
+    </div>
+
+
+    {{/each}}
+    <div class="imageHolder" id="newImage" onclick="displayPopUpForm(this)">
+        <h2>Add Image</h2>
+        <img class="addIcon" src="/icons/add_circle.png" width="50px" height="50px"/>
+    </div>
+    <div id="lightBox" onclick="removeLightBox(this)">
+        <div id="lightBoxImage">
+            
+        </div>
+        <div id="lightBoxText"></div>
+    </div>
+    <div class="formPopUp hidden">
+        <form action="/album/{{{this.albumName}}}" method="POST" enctype="multipart/form-data" class="formContainer">
+            <h2>Add new image</h2>
+            <div class="labelContainer">
+                <label for="name">Name</label><br />
+                <input type="text" name="name" />
+            </div>
+            <div class="labelContainer">
+                <label for="description">Description</label><br />
+                <input type="text" name="description" />
+            </div>
+            
+            <div class="labelContainer">
+                <label for="newImageFile">Upload new image:</label><br />
+                <input type="file" name="newImageFile" accept=".png,.jpg,.jpeg" />
+            </div>
+            <div class="labelContainer">
+                <input type="submit" value="Submit" /><br /><br />
+            </div>
+
+            <button type="button" class="imageFormButton" onclick="hidePopUpForm(this)">Close</button>
+        </form> 
+    </div>
+
+</div>

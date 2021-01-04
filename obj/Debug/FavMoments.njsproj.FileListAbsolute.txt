@@ -1,0 +1,6 @@
+C:\Users\sebas\Dropbox\Programmering\vs\ScriptJS\finalProject\FavMoments\obj\Debug\FavMoments.njsprojAssemblyReference.cache
+C:\Users\sebas\Dropbox\Programmering\vs\ScriptJS\finalProject\FavMoments\obj\Debug\FavMoments.njsproj.CoreCompileInputs.cache
+C:\Users\sebas\Dropbox\Programmering\vs\ScriptJS\finalProject\FavMoments\bin\Microsoft.NodejsTools.WebRole.dll
+C:\Users\sebas\Dropbox\Programmering\vs\finalProject\FavMoments\obj\Debug\FavMoments.njsprojAssemblyReference.cache
+C:\Users\sebas\Dropbox\Programmering\vs\finalProject\FavMoments\obj\Debug\FavMoments.njsproj.CoreCompileInputs.cache
+C:\Users\sebas\Dropbox\Programmering\vs\finalProject\FavMoments\bin\Microsoft.NodejsTools.WebRole.dll
